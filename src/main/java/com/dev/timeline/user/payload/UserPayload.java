@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class UserResponse {
+public class UserPayload {
     private Integer id;
     private String nome;
     private String username;

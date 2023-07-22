@@ -2,7 +2,6 @@ package com.dev.timeline.user.factory;
 
 import com.dev.timeline.user.User;
 import com.dev.timeline.user.payload.UserPayload;
-import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Component
