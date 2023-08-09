@@ -10,7 +10,7 @@ public class UserFactory {
     public User toEntity(UserPayload payload) {
         return User.builder()
                 .id(payload.getId())
-                .nome(payload.getNome())
+                .name(payload.getName())
                 .username(payload.getUsername())
                 .password(payload.getPassword())
                 .gender(payload.getGender())
@@ -20,7 +20,7 @@ public class UserFactory {
     public UserPayload toPayload(User entity) {
         return UserPayload.builder()
                 .id(entity.getId())
-                .nome(entity.getNome())
+                .name(entity.getName())
                 .username(entity.getUsername())
                 .password(entity.getPassword())
                 .gender(entity.getGender())

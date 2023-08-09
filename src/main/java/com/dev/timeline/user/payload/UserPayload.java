@@ -8,7 +8,7 @@ import lombok.Data;
 @Builder
 public class UserPayload {
     private Integer id;
-    private String nome;
+    private String name;
     private String username;
     private String password;
     private GenderEnum gender;
