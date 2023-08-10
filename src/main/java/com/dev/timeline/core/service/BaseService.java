@@ -1,31 +1,31 @@
 package com.dev.timeline.core.service;
 
+import com.dev.timeline.core.repository.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public abstract class BaseService<ENTITY, ID> {
+public abstract class BaseService<ENTITY, ID, REPOSITORY extends BaseRepository<ENTITY, ID>> {
 
     @Autowired
-    protected JpaRepository<ENTITY, ID> repository;
+    private REPOSITORY repository;
 
-    Optional<ENTITY> findById(ID id) {
+    public Optional<ENTITY> findById(ID id) {
         return repository.findById(id);
     }
 
-    List<ENTITY> findAll(){
+    public List<ENTITY> findAll() {
         return repository.findAll();
     }
 
-    ENTITY save(ENTITY entity) {
+    public ENTITY save(ENTITY entity) {
         return repository.save(entity);
     }
 
-    void delete(ID id) {
+    public void delete(ID id) {
         Optional<ENTITY> entity = this.findById(id);
-        if(entity.isPresent()) {
+        if (entity.isPresent()) {
             repository.delete((ENTITY) entity);
         }
     }
