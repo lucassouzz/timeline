@@ -1,5 +1,6 @@
 package com.dev.timeline.achievement;
 
+import com.dev.timeline.core.Identifiable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +13,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Achievement {
+public class Achievement extends Identifiable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

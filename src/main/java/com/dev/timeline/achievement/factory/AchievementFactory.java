@@ -8,12 +8,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class AchievementFactory implements BaseFactory<Achievement, AchievementPayload> {
     @Override
-    public Achievement toEntity(AchievementPayload achievementPayload) {
-        return null;
+    public Achievement toEntity(AchievementPayload payload) {
+        return Achievement.builder()
+                .title(payload.getTitle())
+                .description(payload.getDescription())
+                .build();
     }
 
     @Override
-    public AchievementPayload toPayload(Achievement achievement) {
-        return null;
+    public AchievementPayload toPayload(Achievement entity) {
+        return AchievementPayload.builder()
+                .id(entity.getId())
+                .title(entity.getTitle())
+                .description(entity.getDescription())
+                .build();
     }
 }
