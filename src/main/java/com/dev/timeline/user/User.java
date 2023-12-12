@@ -1,5 +1,6 @@
 package com.dev.timeline.user;
 
+import com.dev.timeline.core.Identifiable;
 import com.dev.timeline.user.enumeration.GenderEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -17,7 +18,7 @@ import jakarta.persistence.GenerationType;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class User {
+public class User extends Identifiable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

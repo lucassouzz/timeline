@@ -12,29 +12,31 @@ import org.springframework.stereotype.Component;
 @Component
 public class ExperienceFactory implements BaseFactory<Experience, ExperiencePayload> {
 
-    private final AchievementService achievementService;
-    private final AchievementFactory achievementFactory;
+    private AchievementService achievementService;
+    private AchievementFactory achievementFactory;
 
     @Override
     public Experience toEntity(ExperiencePayload payload) {
-        return Experience.builder()
-                .company(payload.getCompany())
-                .description(payload.getDescription())
-                .achievements(payload.getAchievements().stream()
-                        .map(achievement -> achievementService.findById(achievement.getId()).get())
-                        .toList())
-                .build();
+//        return Experience.builder()
+//                .company(payload.getCompany())
+//                .description(payload.getDescription())
+//                .achievements(payload.getAchievements().stream()
+//                        .map(achievement -> achievementService.findById(achievement.getId()).get())
+//                        .toList())
+//                .build();
+        return null;
     }
 
     @Override
     public ExperiencePayload toPayload(Experience entity) {
-        return ExperiencePayload.builder()
-                .id(entity.getId())
-                .company(entity.getCompany())
-                .description(entity.getDescription())
-                .achievements(entity.getAchievements().stream()
-                        .map(achievementFactory::toPayload)
-                        .toList())
-                .build();
+//        return ExperiencePayload.builder()
+//                .id(entity.getId())
+//                .company(entity.getCompany())
+//                .description(entity.getDescription())
+//                .achievements(entity.getAchievements().stream()
+//                        .map(achievementFactory::toPayload)
+//                        .toList())
+//                .build();
+        return null;
     }
 }
