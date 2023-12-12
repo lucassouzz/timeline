@@ -1,13 +1,13 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2023-08-11T01:59:11.637Z",
+  "__export_date": "2023-12-12T01:55:53.040Z",
   "__export_source": "insomnia.desktop.app:v2023.4.0",
   "resources": [
     {
       "_id": "req_30d62bfe27a54846bd1984304b76a447",
       "parentId": "fld_5915ab4e99c443b2b52e4a95ea38afa1",
-      "modified": 1691718197737,
+      "modified": 1702346028447,
       "created": 1691717261829,
       "url": "{{ _.url }}/experience",
       "name": "create",
@@ -15,7 +15,7 @@
       "method": "PUT",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"company\": \"teste\",\n\t\"description\": \"teste\",\n\t\"achievements\": [\n\t\t{\n\t\t\t\"id\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 2\n\t\t}\n\t]\n}"
+        "text": "{\n\t\"company\": \"Zitrus\",\n\t\"description\": \"descrição\",\n\t\"achievements\": [\n\t\t{\n\t\t\t\"id\": 102\n\t\t}\n\t]\n}"
       },
       "parameters": [],
       "headers": [
@@ -104,6 +104,29 @@
       "_type": "request"
     },
     {
+      "_id": "req_c888e89bcbaa404d940b9a26adc53817",
+      "parentId": "fld_5915ab4e99c443b2b52e4a95ea38afa1",
+      "modified": 1702346050290,
+      "created": 1702346045263,
+      "url": "{{ _.url }}/experience/paged",
+      "name": "paged",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1691717269893.125,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
       "_id": "req_79d4bdc3d31142da8eaa39de0adfe7da",
       "parentId": "fld_5915ab4e99c443b2b52e4a95ea38afa1",
       "modified": 1691719050042,
@@ -137,7 +160,7 @@
     {
       "_id": "req_89599f602ec841e2969baddf1d9b4849",
       "parentId": "fld_c37de3da0f3d42699656fd09d2a9c5ff",
-      "modified": 1691716764227,
+      "modified": 1702345501381,
       "created": 1691716668538,
       "url": "{{ _.url }}/achievement",
       "name": "create",
@@ -145,7 +168,7 @@
       "method": "PUT",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"title\": \"teste\",\n\t\"description\": \"teste\"\n}"
+        "text": "{\n\t\"title\": \"Zitrus\",\n\t\"description\": \"Desenvolvedor back-end\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -224,6 +247,29 @@
       "_type": "request"
     },
     {
+      "_id": "req_fb8b23b970244773a1a580b34dccc007",
+      "parentId": "fld_c37de3da0f3d42699656fd09d2a9c5ff",
+      "modified": 1702346107481,
+      "created": 1702346080522,
+      "url": "{{ _.url }}/achievement/paged",
+      "name": "paged",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1690458134001.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
       "_id": "req_6bad908f8beb4f6a836d8d5572fa2d28",
       "parentId": "fld_c37de3da0f3d42699656fd09d2a9c5ff",
       "modified": 1691719117808,
@@ -257,7 +303,7 @@
     {
       "_id": "req_b00a7d827a2149c6b4c31c1e6deecbfe",
       "parentId": "fld_849cc11a209049cf81b7c5f686713f5a",
-      "modified": 1690038940181,
+      "modified": 1702345457202,
       "created": 1690038193564,
       "url": "{{ _.url }}/user",
       "name": "create",
@@ -265,7 +311,7 @@
       "method": "PUT",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"nome\": \"Lucas de Souza\",\n\t\"username\": \"lucassouzz\",\n\t\"password\": \"teste\",\n\t\"gender\": \"MASCULINE\"\n}"
+        "text": "{\n\t\"name\": \"Lucas de Souza\",\n\t\"username\": \"lucassouzz\",\n\t\"password\": \"pass\",\n\t\"gender\": \"MASCULINE\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -334,6 +380,29 @@
       "headers": [],
       "authentication": {},
       "metaSortKey": -1690038555225,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d6f841de0d66451bb81097c1b497ee0f",
+      "parentId": "fld_849cc11a209049cf81b7c5f686713f5a",
+      "modified": 1702346119865,
+      "created": 1702346070305,
+      "url": "{{ _.url }}/user/paged",
+      "name": "paged",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1690038555200,
       "isPrivate": false,
       "settingStoreCookies": true,
       "settingSendCookies": true,

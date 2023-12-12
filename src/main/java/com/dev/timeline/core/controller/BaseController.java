@@ -5,10 +5,13 @@ import com.dev.timeline.core.factory.BaseFactory;
 import com.dev.timeline.core.repository.BaseRepository;
 import com.dev.timeline.core.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public abstract class BaseController<
         ENTITY extends Identifiable,
@@ -50,5 +53,12 @@ public abstract class BaseController<
         ENTITY entity = factory.toEntity(payload);
 
         return factory.toPayload(service.update(id, entity));
+    }
+
+    @GetMapping("paged")
+    public Page<PAYLOAD> getPaged(Pageable pageable) {
+        Page<ENTITY> page = service.findPageable(pageable);
+
+        return page.map(factory::toPayload);
     }
 }

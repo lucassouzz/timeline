@@ -3,6 +3,8 @@ package com.dev.timeline.core.service;
 import com.dev.timeline.core.Identifiable;
 import com.dev.timeline.core.repository.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Optional;
@@ -38,5 +40,9 @@ public abstract class BaseService<ENTITY extends Identifiable, ID, REPOSITORY ex
         }
 
         return null;
+    }
+
+    public Page<ENTITY> findPageable(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 }
